@@ -177,7 +177,7 @@ button {
   font-size: 18px;
   line-height: 22px;
   border-bottom: 2px solid transparent;
-  transition: color .3s ease-in-out ,outline .5s ease-in-out ,border-color .3s ease-in-out;
+  transition: color .3s ease-in-out, outline .5s ease-in-out, border-color .3s ease-in-out;
 }
 
 .nav__item-link:focus {
@@ -185,7 +185,7 @@ button {
   outline: 2px solid var(--orange);
 }
 
-.nav__item-link:hover{
+.nav__item-link:hover {
   border-color: var(--orange);
 }
 
@@ -200,7 +200,7 @@ button {
   width: 24px;
   padding: 15px;
   left: 12px;
-  transition: stroke 0.3s ease-in-out , fill 0.3s ease-in-out;
+  transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 
 .nav__right-link-svg {
@@ -603,7 +603,7 @@ button {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
-  transition: border-color .3s ease-in-out , fill .5s ease-in-out;
+  transition: border-color .3s ease-in-out, fill .5s ease-in-out;
   cursor: pointer;
 }
 
@@ -611,11 +611,11 @@ button {
   transition: color .3s ease-in-out;
 }
 
-.list-faq__item:focus  .list-faq__txt {
+.list-faq__item:focus .list-faq__txt {
   color: var(--orange);
 }
 
-.list-faq__item:hover  .list-faq__txt {
+.list-faq__item:hover .list-faq__txt {
   color: var(--orange);
 }
 
@@ -633,6 +633,14 @@ button {
 
 .list-faq__item:active {
   border-color: var(--dark);
+}
+
+.list-faq__svg ellipse {
+  transition: fill 1s ease-in-out;
+}
+
+.list-faq__svg path {
+  transition: fill 1s ease-in-out;
 }
 
 .list-faq__item:focus .list-faq__svg ellipse {
@@ -852,5 +860,3 @@ button {
   border: 1px solid var(--red-orange);
   outline: none;
 }
-
-
