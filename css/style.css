@@ -65,7 +65,7 @@ button {
   --hero-subtitle-mob: 6px;
   --hero-txt: 90px;
   --about-img: 49%;
-  --about: 92px;
+  --about: 6px;
   --about-left: 15px;
   --about-title: 22px;
   --btn-wrap: 350px;
@@ -76,7 +76,7 @@ button {
   --item: 20px;
   --item-title: 8px;
   --item-title1: 4px;
-  --steps: 110px;
+  --steps: 58px;
   --margin-btm: 60px;
   --margin-btm-mob: 32px;
   --marg-bot: 12px;
@@ -86,6 +86,8 @@ button {
   --footer-logo: 130px;
   --svg-faq: 50px;
   --svg-faq-mob: 30px;
+  --margin-bottom2: 20px;
+  --faq: 70px;
 }
 
 :root {

@@ -86,7 +86,7 @@
     font-weight: 400;
   }
 
-  .header {
+  .header__container {
     padding: 0 50px;
   }
 
@@ -203,6 +203,10 @@
   .form__input-wrap {
     align-items: center;
   }
+
+  .footer {
+    padding-bottom: 100px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -298,19 +302,34 @@
     margin-bottom: var(--item);
   }
 
-  .header {
+  .header__container {
     padding: 0 15px;
+    margin-bottom: var(--margin-btm-mob);
   }
 
   .header__logo {
-    width: 75%;
+    width: 66%;
+    padding-top: 19px;
   }
   .burger {
     margin-right: 22%;
   }
 
+  .burger__line:nth-child(1) {
+    top: 22px;
+  }
+
+  .burger__line:nth-child(2) {
+    top: 56%;
+  }
+
   .nav__right-wrap-svg {
-    left: 12px;
+    left: -10px;
+  }
+
+  .nav__right-link-svg {
+    top: 4px;
+    left: 15px;
   }
 
   .hero-img {
@@ -318,7 +337,7 @@
   }
 
   .hero__content {
-    padding: 60px 22px 59px 21px;
+    padding: 60px 20px;
     align-items: center;
     text-align: center;
   }
@@ -326,11 +345,12 @@
   .hero__subtitle {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: var(--hero-subtitle-mob);
+    margin-bottom: var(--item-title);
   }
 
   .hero__text {
     font-size: 12px;
+    line-height: 15px;
     margin-bottom: var(--margin-btm-mob);
   }
 
@@ -355,11 +375,11 @@
     padding: 0;
     flex-direction: column;
     align-items: baseline;
-    margin-bottom: var(--margin-btm-mob);
+    margin-bottom: var(--margin-bottom2);
   }
 
   .about {
-    margin-bottom: var(--item);
+    margin-bottom: var(--about);
   }
 
   .about__wrapper {
@@ -378,7 +398,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
-    margin-bottom: var(--marg-bot);
+    margin-bottom: var(--item-title);
   }
 
   .about__btn {
@@ -391,9 +411,9 @@
   .items__item {
     outline: none;
     background-position: top left;
-    background-size: 70px;
+    background-size: 67px;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 32px;
   }
 
   .items__item:not(:last-child) {
@@ -455,15 +475,19 @@
   }
 
   .list-faq__item {
-    padding: 15px 0;
+    padding: 16px 0;
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
   }
 
   .list-faq__svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq__content {
+    margin-bottom: var(--faq);
   }
 
   .footer__container {
@@ -484,6 +508,10 @@
     line-height: 15px;
     padding: 12px 28px;
     border-radius: 8px;
+  }
+
+  .footer {
+    padding-bottom: 20px;
   }
 
   .footer__left {
