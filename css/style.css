@@ -53,7 +53,41 @@ button {
 
 :root {
   --nav: 85px;
+  --nav-list: 250px;
   --btn: 280px;
+  --btn-mobile: 162px;
+  --svg-search: 24px;
+  --margin: 50px;
+  --margin1: 35px;
+  --margin2: 32px;
+  --hero-subtitle: 24px;
+  --hero-title: 16px;
+  --hero-subtitle-mob: 6px;
+  --hero-txt: 90px;
+  --about-img: 49%;
+  --about: 6px;
+  --about-left: 15px;
+  --about-title: 22px;
+  --btn-wrap: 350px;
+  --work-img: 870px;
+  --icon-wrap: 145px;
+  --form: 570px;
+  --margin-bottom: 45px;
+  --item: 20px;
+  --item-title: 8px;
+  --item-title1: 4px;
+  --steps: 58px;
+  --margin-btm: 60px;
+  --margin-btm-mob: 32px;
+  --marg-bot: 12px;
+  --margin-nav: 80px;
+  --social-link: 40px;
+  --social-link-wrap: 95px;
+  --footer-logo: 130px;
+  --svg-faq: 50px;
+  --svg-faq-mob: 30px;
+  --margin-bottom2: 20px;
+  --faq: 70px;
 }
 
 :root {
@@ -125,7 +159,7 @@ button {
 
 /* общие стили */
 
-.container {
+.section {
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -134,24 +168,28 @@ button {
   display: flex;
 }
 
-.section {
+.container {
   padding: 0 75px;
+}
+
+.txt-block-mob {
+  display: none;
 }
 
 /* header */
 
 .header {
-  padding: 0 75px;
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
 }
 
 .header__container {
+  padding: 0 75px;
   max-width: 1920px;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   border-radius: 0px 0px 32px 32px;
-  margin-bottom: 45px;
+  margin-bottom: var(--margin-bottom);
 }
 
 .header__logo {
@@ -159,12 +197,16 @@ button {
   padding-top: 16px;
 }
 
+.burger {
+  display: none;
+}
+
 .nav {
   align-items: center;
 }
 
 .nav__list {
-  margin-right: 250px;
+  margin-right: var(--nav-list);
 }
 
 .nav__item:not(:last-child) {
@@ -197,7 +239,7 @@ button {
 
 .nav__right-wrap-svg {
   position: relative;
-  width: 24px;
+  width: var(--svg-search);
   padding: 15px;
   left: 12px;
   transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
@@ -253,18 +295,17 @@ button {
   background-repeat: no-repeat;
   border-radius: 32px;
   object-fit: cover;
-  padding: 100px 75px;
-  margin-bottom: 50px;
+  padding: 100px 770px 100px 75px;
+  margin-bottom: var(--margin);
 }
 
 .hero__content {
   align-items: flex-start;
   flex-direction: column;
-  width: 837px;
 }
 
 .hero__subtitle {
-  margin-bottom: 24px;
+  margin-bottom: var(--hero-subtitle);
   color: var(--white);
   font-weight: 800;
   font-size: 70px;
@@ -272,7 +313,7 @@ button {
 }
 
 .hero__text {
-  margin-bottom: 90px;
+  margin-bottom: var(--hero-txt);
   color: var(--white);
   font-weight: 700;
   font-size: 24px;
@@ -305,8 +346,8 @@ button {
 
 /* about */
 
-.about-content {
-  margin-bottom: 92px;
+.about {
+  margin-bottom: var(--about);
 }
 
 .about__wrapper {
@@ -317,9 +358,9 @@ button {
 
 .about-pic {
   position: relative;
-  width: 868px;
+  width: var(--about-img);
   min-height: 622px;
-  margin-right: 10px;
+  margin-right: var(--about-left);
   background-image: url(../img/about.png);
   background-size: cover;
   background-position: center;
@@ -328,11 +369,11 @@ button {
 }
 
 .about__subtitle {
-  margin-bottom: 22px;
+  margin-bottom: var(--about-title);
 }
 
 .about__text {
-  width: 1235px;
+  padding-right: 650px;
   color: var(--dark);
   font-weight: 400;
   font-size: 16px;
@@ -376,6 +417,7 @@ button {
   background-color: var(--orange);
   border: 3px solid var(--orange);
   outline: none;
+  color: var(--white);
 }
 
 .about__btn:hover {
@@ -411,7 +453,7 @@ button {
 }
 
 .items__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: var(--item);
 }
 
 .items__svg1 {
@@ -423,7 +465,7 @@ button {
 }
 
 .items__title {
-  margin-bottom: 8px;
+  margin-bottom: var(--item-title);
   color: var(--dark);
   font-weight: 600;
   font-size: 24px;
@@ -439,12 +481,12 @@ button {
 
 /* steps */
 
-.steps-content {
-  margin-bottom: 110px;
+.steps {
+  margin-bottom: var(--steps);
 }
 
 .steps__subtitle {
-  margin-bottom: 50px;
+  margin-bottom: var(--margin);
 }
 
 .steps__content {
@@ -452,8 +494,9 @@ button {
 }
 
 .ul {
-  width: 450px;
-  margin-bottom: 45px;
+  width: 40%;
+  margin-right: auto;
+  margin-bottom: var(--margin-bottom);
   justify-content: space-between;
 }
 
@@ -488,7 +531,7 @@ button {
 }
 
 .preview__text {
-  width: 720px;
+  padding-right: 75px;
   color: var(--dark);
   margin-bottom: 20px;
   font-size: 16px;
@@ -505,7 +548,7 @@ button {
 
 .preview__btn-wrap {
   justify-content: space-between;
-  width: 350px;
+  width: var(--btn-wrap);
 }
 
 .preview__button {
@@ -569,13 +612,13 @@ button {
 }
 
 .steps-right-side {
-  width: 870px;
-  height: 460px;
+  width: var(--work-img);
+  min-height: 460px;
 }
 
 .steps-left-side {
   width: 758px;
-  height: 460%;
+  min-height: 460px;
 }
 
 /* faq */
@@ -594,7 +637,7 @@ button {
 }
 
 .list-faq__item {
-  padding: 29px 0;
+  padding: 30px 0;
   border-bottom: 1px solid var(--grey);
   border-top: 1px solid var(--grey);
   justify-content: space-between;
@@ -635,6 +678,11 @@ button {
   border-color: var(--dark);
 }
 
+.list-faq__svg {
+  width: 50px;
+  height: 50px;
+}
+
 .list-faq__svg ellipse {
   transition: fill 1s ease-in-out;
 }
@@ -672,6 +720,7 @@ button {
 
 .footer {
   background-color: var(--black);
+  padding-bottom: 150px;
 }
 
 .footer__container {
@@ -684,6 +733,10 @@ button {
 .footer__left {
   flex-direction: column;
   margin-right: 135px;
+}
+
+.footer__center {
+  margin-right: 50px;
 }
 
 .footer__logo {
@@ -719,7 +772,7 @@ button {
 
 .footer__social {
   justify-content: space-between;
-  width: 145px;
+  width: var(--icon-wrap);
 }
 
 .footer__social-icon path {
@@ -769,7 +822,7 @@ button {
 }
 
 .footer__form {
-  position: relative;
+  text-align: center;
 }
 
 .form__input-wrap {
@@ -777,7 +830,7 @@ button {
 }
 
 .form__input {
-  width: 570px;
+  width: var(--form);
   height: 60px;
   background-color: var(--asphalt);
   color: var(--grey);
@@ -804,7 +857,7 @@ button {
 }
 
 .form__textarea {
-  width: 570px;
+  width: var(--form);
   height: 150px;
   background-color: var(--asphalt);
   color: var(--grey);
@@ -831,8 +884,6 @@ button {
 }
 
 .form__button {
-  position: absolute;
-  left: 158px;
   padding: 19px 52px;
   border: 1px solid var(--orange);
   background-color: var(--orange);
