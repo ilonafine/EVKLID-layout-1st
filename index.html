@@ -74,7 +74,7 @@
         </button>
         <div class="header__wrap-input">
           <input class="header__input" type="text" id="search-input" placeholder="Что будем искать?">
-          <button class="header__input-svg" tabindex="0">
+          <button class="header__input-svg" tabindex="0" id="header__close-svg">
             <svg class="header__non-svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)"
@@ -192,29 +192,29 @@
         </h2>
         <ul class="ul flex">
           <li class="ul__steps-item">
-            <a href="#tab_01" data-tab="tab-1" class="ul__steps-link">
+            <button href="#tab_01" class="ul__steps-btn ul__steps-btn--active" data-path="one" aria-label="кнопка для раскрытия презентации 1">
               1 шаг
-            </a>
+            </button>
           </li>
           <li class="ul__steps-item">
-            <a href="#tab_02" data-tab="tab-2" class="ul__steps-link">
+            <button href="#tab_02" class="ul__steps-btn" data-path="two" aria-label="кнопка для раскрытия презентации 2">
               2 шаг
-            </a>
+            </button>
           </li>
           <li class="ul__steps-item">
-            <a href="#tab_03" data-tab="tab-3" class="ul__steps-link">
+            <button href="#tab_03" class="ul__steps-btn" data-path="three" aria-label="кнопка для раскрытия презентации 3">
               3 шаг
-            </a>
+            </button>
           </li>
           <li class="ul__steps-item">
-            <a href="#tab_04" data-tab="tab-4" class="ul__steps-link">
+            <button href="#tab_04" class="ul__steps-btn" data-path="four" aria-label="кнопка для раскрытия презентации 4">
               4 шаг
-            </a>
+            </button>
           </li>
         </ul>
         <div class="tabs preview-wrapper flex">
           <div class="preview steps-left-side flex">
-            <div class="preview-pane" id="tab_01">
+            <div class="tab-content tab-content--active" data-target="one">
               <h3 class="preview__title">
                 Проводим консультацию
               </h3>
@@ -228,16 +228,8 @@
                 Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные
                 особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу.
               </p>
-              <div class="preview__btn-wrap flex">
-                <button class="preview__button">
-                  Подробнее
-                </button>
-                <button class="preview__button2">
-                  Договор
-                </button>
-              </div>
             </div>
-            <div class="preview-pane" id="tab_02">
+            <div class="tab-content" data-target="two">
               <h3 class="preview__title">
                 Составляем смету
               </h3>
@@ -249,16 +241,8 @@
                 реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии
                 независимых исследований.
               </p>
-              <div class="preview__btn-wrap flex">
-                <button class="preview__button">
-                  Подробнее
-                </button>
-                <button class="preview__button2">
-                  Договор
-                </button>
-              </div>
             </div>
-            <div class="preview-pane" id="tab_03">
+            <div class="tab-content" data-target="three">
               <h3 class="preview__title">
                 Привлекаем подрядчиков
               </h3>
@@ -272,16 +256,8 @@
                 нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса профессионального
                 сообщества.
               </p>
-              <div class="preview__btn-wrap flex">
-                <button class="preview__button">
-                  Подробнее
-                </button>
-                <button class="preview__button2">
-                  Договор
-                </button>
-              </div>
             </div>
-            <div class="preview-pane" id="tab_04">
+            <div class="tab-content" data-target="four">
               <h3 class="preview__title">
                 Инспектируем все этапы работ
               </h3>
@@ -293,26 +269,20 @@
                 о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности,
                 постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
               </p>
-              <div class="preview__btn-wrap flex">
-                <button class="preview__button">
-                  Подробнее
-                </button>
-                <button class="preview__button2">
-                  Договор
-                </button>
-              </div>
+            </div>
+            <div class="preview__btn-wrap flex">
+              <button class="preview__button">
+                Подробнее
+              </button>
+              <button class="preview__button2">
+                Договор
+              </button>
             </div>
           </div>
-          <div class="tabs__wrap steps-right-side">
-            <div id="tab-1" class="tabs__wrap-pic1 tab-img">
-            </div>
-            <div id="tab-2" class="tabs__wrap-pic2 tab-img hidden">
-            </div>
-            <div id="tab-3" class="tabs__wrap-pic3 tab-img hidden">
-            </div>
-            <div id="tab-4" class="tabs__wrap-pic4 tab-img hidden">
-            </div>
-          </div>
+            <div id="tab-1" class="tabs__wrap-pic1 tab-img tab-content tab-content--active" data-target="one"></div>
+            <div id="tab-2" class="tabs__wrap-pic2 tab-img tab-content" data-target="two"></div>
+            <div id="tab-3" class="tabs__wrap-pic3 tab-img tab-content" data-target="three"></div>
+            <div id="tab-4" class="tabs__wrap-pic4 tab-img tab-content" data-target="four"></div>
         </div>
       </div>
     </section>
@@ -324,20 +294,19 @@
             Часто задаваемые вопросы
           </h2>
           <ul class="list-faq accordion-container flex">
-            <li class="list-faq__item ac">
-              <h4 class="list-faq__txt flex ac-header ">
+            <li class="list-faq__item flex ac">
+              <button class="list-faq__button flex">
+              <span class="list-faq__txt flex ac-header ac-trigger">
                 Из&nbsp;чего формируется конечная стоимость проекта?
-                <button type="button" class="list-faq-btn ac-trigger">
-                  <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                      fill="black" />
-                  </svg>
-                </button>
-              </h4>
-              <div class="list-faq-content-wrap ac-panel">
-                <p class="list-faq__acordeon ac-text">
+              </span>
+              <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>         
+            </button>
+                <p class="list-faq__acordeon ac-panel">
                   Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
                   нас
                   к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
@@ -355,22 +324,20 @@
                   выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
                   должны быть представлены в исключительно положительном свете.
                 </p>
-              </div>
             </li>
-            <li class="list-faq__item ac">
-              <h4 class="list-faq__txt flex ac-header ">
+            <li class="list-faq__item flex ac">
+              <button class="list-faq__button flex">
+              <span class="list-faq__txt flex ac-header ac-trigger">
                 У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
-                <button type="button" class="list-faq-btn ac-trigger">
-                  <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                      fill="black" />
-                  </svg>
-                </button>
-              </h4>
-              <div class="list-faq-content-wrap ac-panel">
-                <p class="list-faq__acordeon ac-text">
+              </span>
+              <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+              </button>
+                <p class="list-faq__acordeon ac-panel">
                   Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
                   нас
                   к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
@@ -388,22 +355,20 @@
                   выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
                   должны быть представлены в исключительно положительном свете.
                 </p>
-              </div>
             </li>
-            <li class="list-faq__item ac">
-              <h4 class="list-faq__txt flex ac-header ">
+            <li class="list-faq__item flex ac">
+              <button class="list-faq__button flex">
+              <span class="list-faq__txt flex ac-header ac-trigger">
                 Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
-                <button type="button" class="list-faq-btn ac-trigger">
-                  <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                      fill="black" />
-                  </svg>
-                </button>
-              </h4>
-              <div class="list-faq-content-wrap ac-panel">
-                <p class="list-faq__acordeon ac-text">
+              </span>
+              <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+              </button>
+                <p class="list-faq__acordeon ac-panel">
                   Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
                   нас
                   к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
@@ -421,22 +386,20 @@
                   выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
                   должны быть представлены в исключительно положительном свете.
                 </p>
-              </div>
             </li>
-            <li class="list-faq__item ac">
-              <h4 class="list-faq__txt flex ac-header ">
+            <li class="list-faq__item flex ac">
+              <button class="list-faq__button flex">
+              <span class="list-faq__txt flex ac-header ac-trigger">
                 Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/ организацией?
-                <button type="button" class="list-faq-btn ac-trigger">
-                  <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                      fill="black" />
-                  </svg>
-                </button>
-              </h4>
-              <div class="list-faq-content-wrap ac-panel">
-                <p class="list-faq__acordeon ac-text">
+              </span>
+              <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+              </button>
+                <p class="list-faq__acordeon ac-panel">
                   Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
                   нас
                   к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
@@ -454,22 +417,20 @@
                   выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
                   должны быть представлены в исключительно положительном свете.
                 </p>
-              </div>
             </li>
-            <li class="list-faq__item ac">
-              <h4 class="list-faq__txt flex ac-header ">
+            <li class="list-faq__item flex ac">
+              <button class="list-faq__button flex">
+              <span class="list-faq__txt flex ac-header ac-trigger">
                 Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
-                <button type="button" class="list-faq-btn ac-trigger">
-                  <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                      fill="black" />
-                  </svg>
-                </button>
-              </h4>
-              <div class="list-faq-content-wrap ac-panel">
-                <p class="list-faq__acordeon ac-text">
+              </span>
+              <svg class="list-faq__svg" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="black" />
+              </svg>
+              </button>
+                <p class="list-faq__acordeon ac-panel">
                   Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают
                   нас
                   к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но
@@ -487,7 +448,6 @@
                   выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
                   должны быть представлены в исключительно положительном свете.
                 </p>
-              </div>
             </li>
           </ul>
         </aside>

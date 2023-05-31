@@ -352,6 +352,12 @@
     width: 250px;
   }
 
+  .list-faq__svg {
+    top: 35px;
+    width: 30px;
+    height: 30px;
+  }
+
   .preview__btn-wrap {
     width: 65%;
   }
@@ -416,7 +422,6 @@
   .header__input {
     width: 200px;
   }
-
 
   .hero-content {
     margin-bottom: var(--margin-btm);
@@ -526,7 +531,7 @@
     margin-bottom: var(--hero-title);
   }
 
-  .ul__steps-link {
+  .ul__steps-btn {
     font-size: 14px;
     line-height: 17px;
   }
@@ -569,11 +574,6 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
-  }
-
-  .list-faq__svg {
-    width: 30px;
-    height: 30px;
   }
 
   .faq__content {
