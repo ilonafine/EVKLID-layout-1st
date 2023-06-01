@@ -23,6 +23,10 @@
   .ul {
     margin-right: 1000px;
   }
+
+  .tab-img {
+    min-height: 460px;
+  }
 }
 
 @media (max-width: 1650px) {
@@ -39,6 +43,20 @@
 
   .ul {
     margin-right: 600px;
+  }
+
+  .tab-img {
+    width: 435px;
+    min-height: 689px;
+  }
+
+  .steps-left-side {
+    width: 50%;
+    min-height: 689px;
+  }
+
+  .preview__text {
+    margin-right: 10px;
   }
 }
 
@@ -58,14 +76,6 @@
   .about__img-text {
     font-weight: 500;
     line-height: 25px;
-  }
-
-  .tab-img {
-    width: 550px;
-  }
-
-  .list-faq__item {
-    font-size: 20px;
   }
 
   .list-faq__txt  {
@@ -223,33 +233,42 @@
     padding: 0;
   }
 
-  .tab-img {
-    width: 100%;
-    min-height: 689px;
+  .preview-wrapper {
+  flex-direction: column-reverse;
   }
 
-  .steps-left-side {
-    width: 437px;
-    min-height: 576px;
+  .tab-img {
+    width: 100%;
+    min-height: 284px;
+    margin-bottom: 35px;
   }
 
   .steps-right-side {
     width: 100%;
-    min-height: 400px;
+    min-height: 284px;
     margin-bottom: var(--margin1);
+  }
+
+  .steps-left-side {
+    width: 100%;
+    min-height: 352px;
+  }
+
+  .tab-content {
+    min-height: 350px;
   }
 
   .preview__title {
     margin-bottom: var(--item-title);
   }
 
-  .steps-left-side {
-    width: 100%;
+  .list-faq__item .list-faq__txt {
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .preview__text {
-    padding-right: 0;
-    margin-bottom: var(--hero-subtitle);
+    margin: 0;
   }
 
   .form__input-wrap {
@@ -291,8 +310,8 @@
     font-weight: 700;
   }
 
-  .preview-wrapper  {
-    flex-direction: column-reverse;
+  .preview__text {
+    margin-bottom: 20px;
   }
 
   .steps-right-side {
@@ -360,6 +379,10 @@
 
   .preview__btn-wrap {
     width: 65%;
+  }
+
+  .tab-img {
+    min-height: 160px;
   }
 
   .form__button {
@@ -553,6 +576,7 @@
   }
 
   .tab-img {
+    width: 100%;
     min-height: 160px;
   }
 
@@ -569,11 +593,11 @@
     line-height: 15px;
   }
 
-  .list-faq__item {
-    padding: 16px 0;
+  .list-faq__item .list-faq__txt {
     font-weight: 500;
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 24px; 
+    padding: 16px 0;
   }
 
   .faq__content {
