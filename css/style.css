@@ -238,20 +238,21 @@ button {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  outline: none;
   border-bottom: 2px solid transparent;
   transition: color .3s ease-in-out, outline .5s ease-in-out, border-color .3s ease-in-out;
 }
 
-.nav__item-link:focus {
+.nav__item .nav__item-link:focus {
   outline-offset: 2px;
   outline: 2px solid var(--orange);
 }
 
-.nav__item-link:hover {
+.nav__item .nav__item-link:hover {
   border-color: var(--orange);
 }
 
-.nav__item-link:active {
+.nav__item .nav__item-link:active {
   outline: none;
   color: var(--red-orange);
   border-color: var(--red-orange);
@@ -259,6 +260,7 @@ button {
 
 .header__finder {
   position: relative;
+  right: 45px;
 }
 
 .header__right-wrap-svg {
@@ -266,7 +268,7 @@ button {
   width: var(--svg-search);
   height: 32px;
   top: 0;
-  right: 45px;
+  right: 5px;
   background-color: transparent;
   border-radius: 0;
   z-index: 300;
@@ -403,7 +405,7 @@ button {
 
 .header__wrap-input {
   position: absolute;
-  right: -10px;
+  right: -50px;
   bottom: -15px;
   width: 539px;
   min-height: 60px;
@@ -419,6 +421,10 @@ button {
 
 .header__wrap-input.open {
   transform: scale(1);
+}
+
+.header__wrap-input:target {
+  display: block;
 }
 
 .header__input {
@@ -689,6 +695,7 @@ button {
   background-color: transparent;
   border-color: transparent;
   font-style: normal;
+  border-radius: 0;
   outline: none;
   position: relative;
   color: var(--dark);
@@ -705,10 +712,11 @@ button {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 2px;
+  right: 2px;
   outline-offset: 3px;
-  outline: 2px solid var(--color-special);
+  outline: none;
+  border: 2px solid var(--orange);
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
@@ -727,6 +735,10 @@ button {
   color: var(--orange);
 }
 
+.ul__steps-btn:active {
+  color: var(--red-orange);
+}
+
 .ul__steps-btn:focus-visible::after {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -736,10 +748,6 @@ button {
 
 .ul__steps-btn:active::after {
   opacity: 0;
-}
-
-.ul__steps-btn:active {
-  color: var(--red-orange);
 }
 
 .tab-content {
@@ -907,12 +915,14 @@ button {
   background-color: transparent;
   margin-top: 0;
   border: none;
+  outline: none;
   border-top: 1px solid var(--grey);
   border-bottom: 2px solid var(--grey);
 }
 
 .list-faq__item:focus {
   border-color: var(--orange);
+  outline: 1px solid transparent;
 }
 
 .list-faq__item:hover {
@@ -956,6 +966,21 @@ button {
   border-radius: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.list-faq__button:focus-visible {
+  outline: none;
+  border-color: var(--orange);
+  color: var(--orange);
+  z-index: 2;
+}
+
+.list-faq__button:focus-visible path {
+  fill: var(--orange);
+}
+
+.list-faq__button:focus-visible ellipse {
+  fill: var(--orange);
 }
 
 .list-faq__acordeon {

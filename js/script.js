@@ -59,3 +59,4 @@ $stepsLink.forEach(function (tabsBtn) {
     });
   });
 });
+
