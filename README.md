@@ -1,27 +1,65 @@
-# EVKLID-layout-1st
-Interactive website with responsive interface!
+# EVKLID Layout - 1st
 
-*Burger menu(JS)____ *Show blocks on click.(JS)____ *Tabs____ *Slider.(JS)____ *Accordion(JS)____ *{ Accessibility( semantic, screenreader, aria-atribut) }____ *Crossbrowser Compatibility____ *Keeyboard Focus____
-tools:
-Pixel perfect____ Media quaries____ Responsive image____ 
-*basic tags. *scrolling. *content 
+## Project Overview
 
-*image tags. *z-index  *text owerflow - (check)
+EVKLID Layout - 1st is an interactive website with a responsive interface, featuring various elements and functionalities to showcase web development skills. This project includes:
 
-*links.
+- Burger Menu (JavaScript)
+- Show Blocks on Click (JavaScript)
+- Tabs
+- Slider (JavaScript)
+- Accordion (JavaScript)
+- Accessibility (Semantic HTML, Screen Reader, ARIA Attributes)
+- Cross-Browser Compatibility
+- Keyboard Focus
+- Pixel Perfect
+- Media Queries
+- Responsive Image
+- Basic Tags
+- Scrolling
+- Content Layout
+- Image Tags
+- Z-Index
+- Text Overflow
+- Links
+- Buttons
+- Stylization (Text, Colors, Fonts, Background, Borders, Shadows)
+- Forms (Textarea, Placeholder, Select, Disabled, Fieldset & Legend)
+- Lists Tags
+- Tables Tags
+- Image Formats
+- Selectors
+- Connecting Fonts
+- Combinator Selectors
+- Properties
+- Site Container
+- All: Unset, Initial, Inherit, Revert
+- Box Model
+- Semantics of the HTML Tree
+- Transition
 
-*buttons. *stylization (text, colors, fonts, *Forms
+## Technologies and Tools Used
 
-*list tags. background, borders, shadows). textarea, placeholder, select,
+- HTML5: Utilized semantic tags and structured the content.
+- CSS3: Styled elements for an aesthetically pleasing design.
+- JavaScript: Implemented interactive features such as a burger menu, show blocks on click, tabs, slider, and accordion.
+- Media Queries: Ensured responsiveness across various devices.
+- Pixel Perfect: Focused on achieving precise design alignment.
+- Accessibility: Prioritized semantic HTML, screen reader compatibility, and ARIA attributes.
+- Cross-Browser Compatibility: Ensured consistent functionality across different browsers.
+- Keyboard Focus: Implemented features for keyboard navigation and focus.
+- Transition: Added smooth transitions for improved user experience.
 
-*tables tags. *image formats. disabled, fieldset & legend... }
+## How to Explore
 
-*selectors *connecting fonts. *combinator selectors.
+1. Open the website in a web browser on any device.
+2. Interact with the burger menu, tabs, slider, accordion, and other features.
+3. Explore the responsive design and functionality across different devices.
+4. Evaluate the pixel-perfect design and attention to detail.
 
-*properties *site container . *all: unset, initial, inherit, revert.
+## How to Contribute
 
-*block model *Semantics of the HTML tree: { *transition.
+Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
 
-*border-box
-
+Thank you for exploring EVKLID Layout - 1st!
 
