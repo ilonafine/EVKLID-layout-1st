@@ -1377,3 +1377,36 @@ button {
   border: 1px solid var(--red-orange);
   outline: none;
 }
+
+/* scroll button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 9px;
+  right: 20px;
+  background-color: var(--light-orange);
+  opacity: 70%;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; 
+  animation: blink 2s infinite;
+}
+
+.scroll-to-top.show {
+  display: block; 
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
